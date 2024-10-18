@@ -5,7 +5,7 @@
   "Routes": [
     {
       //Event
-      "UpstreamPathTemplate": "/gateway/event",
+      "UpstreamPathTemplate": "/gateway/Event",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/api/Event",
       "DownstreamScheme": "http",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/event/{id}",
+      "UpstreamPathTemplate": "/gateway/Event/{id}",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/api/Event{id}",
       "DownstreamScheme": "http",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/event",
+      "UpstreamPathTemplate": "/gateway/Event",
       "UpstreamHttpMethod": [ "Post" ],
       "DownstreamPathTemplate": "/api/Event",
       "DownstreamScheme": "http",
@@ -40,9 +40,34 @@
         }
       ]
     },
+    {
+      "UpstreamPathTemplate": "/gateway/Event/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/Event",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Event/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/Event",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+
     // Enterprise
     {
-      "UpstreamPathTemplate": "/gateway/enterprise",
+      "UpstreamPathTemplate": "/gateway/Enterprise",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/api/Enterprise",
       "DownstreamScheme": "http",
@@ -54,7 +79,7 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/enterprise/{id}",
+      "UpstreamPathTemplate": "/gateway/Enterprise/{id}",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/api/Enterprise{id}",
       "DownstreamScheme": "http",
@@ -66,7 +91,7 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/enterprise",
+      "UpstreamPathTemplate": "/gateway/Enterprise",
       "UpstreamHttpMethod": [ "Post" ],
       "DownstreamPathTemplate": "/api/Enterprise",
       "DownstreamScheme": "http",
@@ -74,6 +99,154 @@
         {
           "Host": "localhost",
           "Port": 5002
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Enterprise/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/Enterprise",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Enterprise/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/Enterprise",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    ///////////// MS Reservas  /////////
+    {
+      //Participant
+      "UpstreamPathTemplate": "/gateway/Participant",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Participant",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Participant/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Participant{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Participant",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Participant",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Participant/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/Participant",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Participant/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/Participant",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+
+    // Reservation
+    {
+      "UpstreamPathTemplate": "/gateway/Reservation",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Reservation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Reservation/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Reservation{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Reservation",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Reservation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Reservation/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/Reservation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Reservation/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/Reservation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
         }
       ]
     }

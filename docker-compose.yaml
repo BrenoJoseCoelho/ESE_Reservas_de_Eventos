@@ -32,7 +32,7 @@ services:
       dockerfile: Dockerfile
     container_name: reservas_service
     ports:
-      - "5001:5000"  # ajuste a porta conforme necessário
+      - "8080:8080"  # ajuste a porta conforme necessário
 
   eventos:
     build:
@@ -40,7 +40,7 @@ services:
       dockerfile: Dockerfile
     container_name: eventos_service
     ports:
-      - "5002:5000"  # ajuste a porta conforme necessário
+      - "8081:8080"  # ajuste a porta conforme necessário
 
   api_gateway:
     build:
@@ -48,7 +48,7 @@ services:
       dockerfile: Dockerfile
     container_name: api_gateway_service
     ports:
-      - "5003:5000"  # ajuste a porta conforme necessário
+      - "8082:8080"  # ajuste a porta conforme necessário
 
 volumes:
   pgdata:

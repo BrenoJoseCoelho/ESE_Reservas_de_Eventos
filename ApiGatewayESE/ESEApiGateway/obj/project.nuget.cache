@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R0yhV0yJlU9N/v3lVpW3NOUZZhy7RJoLnRy39TVPk6+Z6brXhwFS1tNB6SqFc5IgIriE7D4VqTDupW4lwhMAJQ==",
+  "dgSpecHash": "tM/9iFi+KTIMIXPmi1ItnSnbY5tcA+ImrfotAYQQWwLbFGQLDG2rdevAmxcHcky7vm1laGxsa28h9KCuC24Ulw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\ApiGatewayESE\\ESEApiGateway\\ESEApiGateway.csproj",
+  "projectFilePath": "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\ApiGatewayESE\\ESEApiGateway\\ESEApiGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\breno\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
     "C:\\Users\\breno\\.nuget\\packages\\ipaddressrange\\6.0.0\\ipaddressrange.6.0.0.nupkg.sha512",

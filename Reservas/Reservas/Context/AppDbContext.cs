@@ -13,10 +13,9 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
         // event
         modelBuilder.Entity<Reservation>().HasKey(e => e.Id);
-
-
 
         //enterprise
         modelBuilder.Entity<Participant>().HasKey(e => e.Id);

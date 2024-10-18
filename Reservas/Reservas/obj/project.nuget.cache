@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F8ApL9nwP4C3Z2f9kgjEJgnVygGmBfKI527H8XgayBjgEfO1QsK4ynVoEDX+z/qbqNVKT0PwPDfSPb5QSRGEsg==",
+  "dgSpecHash": "WNyFPfY4zpSg+hHs00+EeImz2zvf718wqIm4k+lGbrthyKrv06XONGyj7EJFmCpZbAXpc3MVTZUv5v/wqJ8woQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj",
+  "projectFilePath": "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\breno\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\breno\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

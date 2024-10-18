@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj": {}
+    "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj": {
+    "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj",
+        "projectUniqueName": "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj",
         "projectName": "ReservasApi",
-        "projectPath": "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj",
+        "projectPath": "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\Reservas\\Reservas\\ReservasApi.csproj",
         "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\Reservas\\Reservas\\obj\\",
+        "outputPath": "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\Reservas\\Reservas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config",

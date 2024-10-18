@@ -607,11 +607,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\ApiGatewayESE\\ESEApiGateway\\ESEApiGateway.csproj",
+      "projectUniqueName": "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\ApiGatewayESE\\ESEApiGateway\\ESEApiGateway.csproj",
       "projectName": "ESEApiGateway",
-      "projectPath": "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\ApiGatewayESE\\ESEApiGateway\\ESEApiGateway.csproj",
+      "projectPath": "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\ApiGatewayESE\\ESEApiGateway\\ESEApiGateway.csproj",
       "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\breno\\OneDrive\\Documentos\\ESE_Reserva_de_Eventos\\ApiGatewayESE\\ESEApiGateway\\obj\\",
+      "outputPath": "C:\\Users\\breno\\OneDrive\\Documentos\\GitHub\\ESE_Reservas_de_Eventos\\ApiGatewayESE\\ESEApiGateway\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config",
