@@ -1,254 +1,247 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl":  "http://localhost:5003"
+    "BaseUrl":  "http://localhost:8082"
   },
   "Routes": [
-    {
+      {
+        "UpstreamPathTemplate": "/api/Account",
+        "UpstreamHttpMethod": [ "Get" ],
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "host.docker.internal",
+            "Port": 8083
+          }
+        ],
+        "DownstreamPathTemplate": "/api/Account"
+      },
+      {
       //Event
       "UpstreamPathTemplate": "/gateway/Event",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Post" ],
       "DownstreamPathTemplate": "/api/Event",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5002
+          "Port": 8081
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Event/{id}",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Delete", "Put" ],
       "DownstreamPathTemplate": "/api/Event{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "host.docker.internal",
+          "Port": 8081
         }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Event",
-      "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/api/Event",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Event/{id}",
-      "UpstreamHttpMethod": [ "Put" ],
-      "DownstreamPathTemplate": "/api/Event",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Event/{id}",
-      "UpstreamHttpMethod": [ "Delete" ],
-      "DownstreamPathTemplate": "/api/Event",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
 
     // Enterprise
     {
       "UpstreamPathTemplate": "/gateway/Enterprise",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Post" ],
       "DownstreamPathTemplate": "/api/Enterprise",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "host.docker.internal",
+          "Port": 8081
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Enterprise/{id}",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
       "DownstreamPathTemplate": "/api/Enterprise{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "host.docker.internal",
+          "Port": 8081
         }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Enterprise",
-      "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/api/Enterprise",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Enterprise/{id}",
-      "UpstreamHttpMethod": [ "Put" ],
-      "DownstreamPathTemplate": "/api/Enterprise",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Enterprise/{id}",
-      "UpstreamHttpMethod": [ "Delete" ],
-      "DownstreamPathTemplate": "/api/Enterprise",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     ///////////// MS Reservas  /////////
     {
       //Participant
       "UpstreamPathTemplate": "/gateway/Participant",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Post" ],
       "DownstreamPathTemplate": "/api/Participant",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "host.docker.internal",
+          "Port": 8080
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Participant/{id}",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
       "DownstreamPathTemplate": "/api/Participant{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "host.docker.internal",
+          "Port": 8080
         }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Participant",
-      "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/api/Participant",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Participant/{id}",
-      "UpstreamHttpMethod": [ "Put" ],
-      "DownstreamPathTemplate": "/api/Participant",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Participant/{id}",
-      "UpstreamHttpMethod": [ "Delete" ],
-      "DownstreamPathTemplate": "/api/Participant",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
 
     // Reservation
     {
       "UpstreamPathTemplate": "/gateway/Reservation",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Post" ],
       "DownstreamPathTemplate": "/api/Reservation",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "host.docker.internal",
+          "Port": 8080
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Reservation/{id}",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
       "DownstreamPathTemplate": "/api/Reservation{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "host.docker.internal",
+          "Port": 8080
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    // Promocoes
+    {
+      "UpstreamPathTemplate": "/gateway/Promotion",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/Promotion",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 8084
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Promotion/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/Promotion{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 8084
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Coupon",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/Coupon",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 8084
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Coupon/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/Coupon{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "host.docker.internal",
+          "Port": 8084
         }
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/Reservation",
-      "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/api/Reservation",
+      "UpstreamPathTemplate": "/gateway/Campaign",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/Campaign",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "host.docker.internal",
+          "Port": 8084
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
-      "UpstreamPathTemplate": "/gateway/Reservation/{id}",
-      "UpstreamHttpMethod": [ "Put" ],
-      "DownstreamPathTemplate": "/api/Reservation",
+      "UpstreamPathTemplate": "/gateway/Campaign/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/Campaign{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "host.docker.internal",
+          "Port": 8084
         }
-      ]
-    },
-    {
-      "UpstreamPathTemplate": "/gateway/Reservation/{id}",
-      "UpstreamHttpMethod": [ "Delete" ],
-      "DownstreamPathTemplate": "/api/Reservation",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProoviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     }
   ]
 }

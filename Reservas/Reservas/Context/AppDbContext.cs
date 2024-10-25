@@ -16,8 +16,14 @@ public class AppDbContext : DbContext
 
         // event
         modelBuilder.Entity<Reservation>().HasKey(e => e.Id);
+        modelBuilder.Entity<Reservation>()
+            .Property(e => e.Id)
+            .ValueGeneratedOnAdd();
 
         //enterprise
         modelBuilder.Entity<Participant>().HasKey(e => e.Id);
+        modelBuilder.Entity<Participant>()
+            .Property(e => e.Id)
+            .ValueGeneratedOnAdd();
     }
 }

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promocoes", "Promocoes\Promocoes.csproj", "{F84E9CCA-869B-4C91-BB7C-79984B5DDA63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Promocoes", "Promocoes\Promocoes.csproj", "{F84E9CCA-869B-4C91-BB7C-79984B5DDA63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESEApiGateway", "..\ApiGatewayESE\ESEApiGateway\ESEApiGateway.csproj", "{802C7017-F74B-4FC6-807C-77F290CE94B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESEIdentity", "..\ESEIdentity\ESEIdentity\ESEIdentity.csproj", "{A7BAC779-E780-4688-A400-1FE8680C34C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F84E9CCA-869B-4C91-BB7C-79984B5DDA63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F84E9CCA-869B-4C91-BB7C-79984B5DDA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F84E9CCA-869B-4C91-BB7C-79984B5DDA63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{802C7017-F74B-4FC6-807C-77F290CE94B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{802C7017-F74B-4FC6-807C-77F290CE94B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{802C7017-F74B-4FC6-807C-77F290CE94B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{802C7017-F74B-4FC6-807C-77F290CE94B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7BAC779-E780-4688-A400-1FE8680C34C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7BAC779-E780-4688-A400-1FE8680C34C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7BAC779-E780-4688-A400-1FE8680C34C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7BAC779-E780-4688-A400-1FE8680C34C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

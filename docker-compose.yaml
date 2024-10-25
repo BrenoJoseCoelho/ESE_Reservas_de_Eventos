@@ -26,13 +26,52 @@ services:
     ports:
       - "5434:5432"
 
+  postgres3:
+    image: postgres:14
+    container_name: postgres-db3
+    environment:
+      POSTGRES_USER: admin_promotion
+      POSTGRES_PASSWORD: promotion123
+      POSTGRES_DB: promotiondb
+    volumes:
+      - pgdata3:/var/lib/postgresql/data
+      - ./init-third.sql:/docker-entrypoint-initdb.d/init-third.sql
+    ports:
+      - "5435:5432"
+
+  postgres4:
+    image: postgres:14
+    container_name: postgres-db4
+    environment:
+      POSTGRES_USER: admin_identity
+      POSTGRES_PASSWORD: eseidentity123
+      POSTGRES_DB: identitydb
+    volumes:
+      - pgdata4:/var/lib/postgresql/data
+      - ./init-fourth.sql:/docker-entrypoint-initdb.d/init-fourth.sql
+    ports:
+      - "5436:5432"
+
+  postgres5:
+    image: postgres:14
+    container_name: postgres-db5
+    environment:
+      POSTGRES_USER: admin_feedback
+      POSTGRES_PASSWORD: esefeedback123
+      POSTGRES_DB: feedbackdb
+    volumes:
+      - pgdata5:/var/lib/postgresql/data
+      - ./init-fifth.sql:/docker-entrypoint-initdb.d/init-fifth.sql
+    ports:
+      - "5437:5432"
+
   reservas:
     build:
       context: ./Reservas
       dockerfile: Dockerfile
     container_name: reservas_service
     ports:
-      - "8080:8080"  # ajuste a porta conforme necessário
+      - "8080:8080" 
 
   eventos:
     build:
@@ -40,7 +79,7 @@ services:
       dockerfile: Dockerfile
     container_name: eventos_service
     ports:
-      - "8081:8080"  # ajuste a porta conforme necessário
+      - "8081:8080" 
 
   api_gateway:
     build:
@@ -48,8 +87,35 @@ services:
       dockerfile: Dockerfile
     container_name: api_gateway_service
     ports:
-      - "8082:8080"  # ajuste a porta conforme necessário
+      - "8082:8080" 
+      
+  identity:
+    build:
+      context: ./ESEIdentity
+      dockerfile: Dockerfile
+    container_name: identity_service
+    ports:
+      - "8083:8080"  
+      
+  promotion:
+    build:
+      context: ./Promocoes
+      dockerfile: Dockerfile
+    container_name: promocoes_service
+    ports:
+      - "8084:8080" 
+
+  feedback:
+    build:
+      context: ./Feedback
+      dockerfile: Dockerfile
+    container_name: feedback_service
+    ports:
+      - "8085:8080" 
 
 volumes:
   pgdata:
   pgdata2:
+  pgdata3:
+  pgdata4:
+  pgdata5:

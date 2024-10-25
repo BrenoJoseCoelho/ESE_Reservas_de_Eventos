@@ -48,7 +48,7 @@ namespace ReservasApi.Controllers
                 reservationDto);
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut("{id:Guid}")]
         public async Task<ActionResult> Put(Guid id, [FromBody] ReservationsDto reservationDto)
         {
             if (id != reservationDto.Id)
@@ -62,7 +62,7 @@ namespace ReservasApi.Controllers
             return Ok(reservationDto);
         }
 
-        [HttpDelete("{id:int}")]
+        [HttpDelete("{id:Guid}")]
         public async Task<ActionResult<ReservationsDto>> Delete(Guid id)
         {
             var reservationDto = await _reservationService.GetReservationById(id);

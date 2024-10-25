@@ -1,0 +1,7 @@
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Feedback\Feedback\obj\Debug\net8.0\Feedback.csproj.AssemblyReference.cache
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Feedback\Feedback\obj\Debug\net8.0\Feedback.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Feedback\Feedback\obj\Debug\net8.0\Feedback.AssemblyInfoInputs.cache
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Feedback\Feedback\obj\Debug\net8.0\Feedback.AssemblyInfo.cs
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Feedback\Feedback\obj\Debug\net8.0\Feedback.csproj.CoreCompileInputs.cache
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Feedback\Feedback\obj\Debug\net8.0\Feedback.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Feedback\Feedback\obj\Debug\net8.0\Feedback.sourcelink.json

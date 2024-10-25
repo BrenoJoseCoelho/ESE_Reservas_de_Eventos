@@ -22,7 +22,26 @@ namespace EventosApi.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Eventos.Models.Event", b =>
+            modelBuilder.Entity("EventosApi.Models.Enterprise", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Document")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Enterprises");
+                });
+
+            modelBuilder.Entity("EventosApi.Models.Event", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,26 +69,7 @@ namespace EventosApi.Migrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("EventosApi.Models.Enterprise", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Document")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Enterprises");
-                });
-
-            modelBuilder.Entity("Eventos.Models.Event", b =>
+            modelBuilder.Entity("EventosApi.Models.Event", b =>
                 {
                     b.HasOne("EventosApi.Models.Enterprise", "Enterprise")
                         .WithMany()

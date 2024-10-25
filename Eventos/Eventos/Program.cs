@@ -1,4 +1,5 @@
 using EnterpriseosApi.Repositories.Enterprises;
+//using ESEIdentity;
 using EventosApi.Context;
 using EventosApi.Repositories.Enterprises;
 using EventosApi.Repositories.Events;
@@ -20,7 +21,7 @@ builder.Services.AddEntityFrameworkNpgsql().AddDbContext<AppDbContext>(options =
     options.UseNpgsql(dbConnection));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+//builder.Services.AddCustomJwtAuthentication();
 // Registro dos repositórios e serviços
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IEnterpriseRepository, EnterpriseRepository>();

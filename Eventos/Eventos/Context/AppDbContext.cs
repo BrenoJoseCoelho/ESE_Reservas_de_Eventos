@@ -15,10 +15,16 @@ public class AppDbContext : DbContext
         base.OnModelCreating(modelBuilder);
         // event
         modelBuilder.Entity<Event>().HasKey(e => e.Id);
+        modelBuilder.Entity<Event>()
+            .Property(e => e.Id)
+            .ValueGeneratedOnAdd();
 
 
 
         //enterprise
         modelBuilder.Entity<Enterprise>().HasKey(e => e.Id);
+        modelBuilder.Entity<Enterprise>()
+            .Property(e => e.Id)
+            .ValueGeneratedOnAdd();
     }
 }

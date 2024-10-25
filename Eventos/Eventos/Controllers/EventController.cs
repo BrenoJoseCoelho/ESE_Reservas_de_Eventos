@@ -1,5 +1,6 @@
 ﻿using EventosApi.Dtos;
 using EventosApi.Services.Events;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventosApi.Controllers
@@ -16,6 +17,7 @@ namespace EventosApi.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<EventDto>>> Get()
         {
             var EventsDto = await _EventService.GetEvents();
@@ -48,7 +50,7 @@ namespace EventosApi.Controllers
                 eventDto);
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut("{id:Guid}")]
         public async Task<ActionResult> Put(Guid id, [FromBody] EventDto eventDto)
         {
             if (id != eventDto.Id)
@@ -62,7 +64,7 @@ namespace EventosApi.Controllers
             return Ok(eventDto);
         }
 
-        [HttpDelete("{id:int}")]
+        [HttpDelete("{id:Guid}")]
         public async Task<ActionResult<EventDto>> Delete(Guid id)
         {
             var EventDto = await _EventService.GetEventById(id);
