@@ -14,7 +14,8 @@ public class EventRepository : IEventRepository
 
     public async Task<IEnumerable<Event>> GetAll()
     {
-        return await _context.Events.ToListAsync();
+        return await _context.Events.Include(e => e.Enterprise).ToListAsync();
+
     }
     public async Task<Event> GetById(Guid id)
     {

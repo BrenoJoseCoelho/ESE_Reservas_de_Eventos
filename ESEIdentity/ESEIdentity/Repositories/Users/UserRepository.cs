@@ -20,6 +20,10 @@ public class UserRepository : IUserRepository
     {
         return await _context.Users.Where(c => c.Id == id).FirstOrDefaultAsync();
     }
+    public async Task<User> GetByUserAndPassword(AuthenticationRequest request)
+    {
+        return await _context.Users.Where(c => c.Name == request.UserName && c.Password == request.Password).FirstOrDefaultAsync();
+    }
     public async Task<User> Create(User user)
     {
         _context.Users.Add(user);

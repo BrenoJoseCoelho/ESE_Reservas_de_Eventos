@@ -2,6 +2,7 @@
 using ReservasApi.Dtos;
 using ReservasApi.Models;
 using ReservasApi.Repositories.Participants;
+using ReservasApi.Request;
 
 namespace ReservasApi.Services.Participants
 {
@@ -25,13 +26,12 @@ namespace ReservasApi.Services.Participants
             var participantEntity = await _participantRepository.GetById(id);
             return _mapper.Map<ParticipantDto>(participantEntity);
         }
-        public async Task AddParticipant(ParticipantDto participantDto)
+        public async Task AddParticipant(CreateParticipantRequest participantDto)
         {
             var participantEntity = _mapper.Map<Participant>(participantDto);
             await _participantRepository.Create(participantEntity);
-            participantDto.Id = participantEntity.Id;
         }
-        public async Task UpdateParticipant(ParticipantDto participantDto)
+        public async Task UpdateParticipant(UpdateParticipantRequest participantDto)
         {
             var participantEntity = _mapper.Map<Participant>(participantDto);
             await _participantRepository.Update(participantEntity);

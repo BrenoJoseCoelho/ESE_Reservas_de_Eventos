@@ -1,4 +1,5 @@
 ﻿using EventosApi.Dtos;
+using EventosApi.Request;
 
 namespace EventosApi.Services.Events
 {
@@ -6,8 +7,8 @@ namespace EventosApi.Services.Events
     {
         Task<IEnumerable<EventDto>> GetEvents();
         Task<EventDto> GetEventById(Guid id);
-        Task AddEvent(EventDto eventDto);
-        Task UpdateEvent(EventDto eventDto);
+        Task AddEvent(CreateEventRequest eventDto);
+        Task UpdateEvent(UpdateEventRequest eventDto);
         Task RemoveEvent(Guid id);
     }
 }

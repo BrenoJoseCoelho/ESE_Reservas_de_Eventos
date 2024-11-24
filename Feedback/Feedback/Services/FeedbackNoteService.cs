@@ -2,6 +2,7 @@
 using Feedback.Dtos;
 using Feedback.Models;
 using Feedback.Repositories;
+using Feedback.Request;
 
 namespace Feedback.Services;
 
@@ -25,13 +26,12 @@ public class FeedbackNoteService : IFeedbackNoteService
         var feedbackNoteEntity = await _feedbackNoteRepository.GetById(id);
         return _mapper.Map<FeedbackNoteDto>(feedbackNoteEntity);
     }
-    public async Task AddFeedbackNote(FeedbackNoteDto feedbackNoteDto)
+    public async Task AddFeedbackNote(CreateFeedbackNoteRequest feedbackNoteDto)
     {
         var feedbackNoteEntity = _mapper.Map<FeedbackNote>(feedbackNoteDto);
         await _feedbackNoteRepository.Create(feedbackNoteEntity);
-        feedbackNoteDto.Id = feedbackNoteEntity.Id;
     }
-    public async Task UpdateFeedbackNote(FeedbackNoteDto feedbackNoteDto)
+    public async Task UpdateFeedbackNote(UpdateFeedbackNoteRequest feedbackNoteDto)
     {
         var feedbackNoteEntity = _mapper.Map<FeedbackNote>(feedbackNoteDto);
         await _feedbackNoteRepository.Update(feedbackNoteEntity);

@@ -2,6 +2,7 @@
 using ReservasApi.Dtos;
 using ReservasApi.Models;
 using ReservasApi.Repositories.Reservations;
+using ReservasApi.Request;
 
 namespace ReservasApi.Services.Reservations
 {
@@ -25,13 +26,12 @@ namespace ReservasApi.Services.Reservations
             var reservationEntity = await _reservationRepository.GetById(id);
             return _mapper.Map<ReservationsDto>(reservationEntity);
         }
-        public async Task AddReservation(ReservationsDto reservationDto)
+        public async Task AddReservation(CreateReservationRequest reservationDto)
         {
             var reservationEntity = _mapper.Map<Reservation>(reservationDto);
             await _reservationRepository.Create(reservationEntity);
-            reservationDto.Id = reservationEntity.Id;
         }
-        public async Task UpdateReservation(ReservationsDto reservationDto)
+        public async Task UpdateReservation(UpdateReservationRequest reservationDto)
         {
             var reservationEntity = _mapper.Map<Reservation>(reservationDto);
             await _reservationRepository.Update(reservationEntity);

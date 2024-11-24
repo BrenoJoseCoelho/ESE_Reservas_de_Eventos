@@ -5,7 +5,7 @@
         public Guid Id { get; set; }
         public int Note { get; set; }
         public string Observation { get; set; }
-        public Guid UserId { get; set; }
-        public Guid EventId { get; set; }
+        public UserDto User { get; set; }
+        public EventDto Event { get; set; }
     }
 }

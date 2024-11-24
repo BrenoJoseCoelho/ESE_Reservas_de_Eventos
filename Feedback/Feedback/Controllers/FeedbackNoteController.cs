@@ -1,4 +1,5 @@
 ﻿using Feedback.Dtos;
+using Feedback.Request;
 using Feedback.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,19 +38,19 @@ public class FeedbackNoteController : ControllerBase
         return Ok(feedbackNoteDto);
     }
     [HttpPost]
-    public async Task<ActionResult> Post([FromBody] FeedbackNoteDto feedbackNoteDto)
+    public async Task<ActionResult> Post([FromBody] CreateFeedbackNoteRequest feedbackNoteDto)
     {
         if (feedbackNoteDto == null)
             return BadRequest("Invalid Data");
 
         await _feedbackNoteService.AddFeedbackNote(feedbackNoteDto);
 
-        return new CreatedAtRouteResult("GetFeedbackNote", new { id = feedbackNoteDto.Id },
+        return new CreatedAtRouteResult("GetFeedbackNote",
             feedbackNoteDto);
     }
 
     [HttpPut("{id:Guid}")]
-    public async Task<ActionResult> Put(Guid id, [FromBody] FeedbackNoteDto feedbackNoteDto)
+    public async Task<ActionResult> Put(Guid id, [FromBody] UpdateFeedbackNoteRequest feedbackNoteDto)
     {
         if (id != feedbackNoteDto.Id)
             return BadRequest();

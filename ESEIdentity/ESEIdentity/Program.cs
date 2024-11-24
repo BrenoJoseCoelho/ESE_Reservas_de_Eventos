@@ -3,13 +3,13 @@ using ESEIdentity.Context;
 using ESEIdentity.Repositories.Users;
 using ESEIdentity.Services.Users;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<JwtTokenHandler>();
 builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
@@ -17,21 +17,26 @@ var dbConnection = builder.Configuration.GetConnectionString("DefaultConnection"
 
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(dbConnection));
-
+builder.Services.AddScoped<JwtTokenHandler>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "IdentityAPI",
+        Version = "v1",
+    });
+});
 // Registro dos repositórios e serviços
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Identity API V1");
+});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

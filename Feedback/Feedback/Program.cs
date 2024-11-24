@@ -2,6 +2,7 @@ using Feedback.Context;
 using Feedback.Repositories;
 using Feedback.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,8 +14,19 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
 var dbConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 
+builder.Services.AddHttpClient();
+
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(dbConnection));
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "FeedbackAPI",
+        Version = "v1",
+    });
+});
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Registro dos repositórios e serviços
@@ -22,13 +34,11 @@ builder.Services.AddScoped<IFeedbackNoteRepository, FeedbackNoteRepository>();
 builder.Services.AddScoped<IFeedbackNoteService, FeedbackNoteService>();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Feedback API V1");
+});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

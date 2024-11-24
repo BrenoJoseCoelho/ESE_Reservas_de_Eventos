@@ -1,4 +1,5 @@
 ﻿using ReservasApi.Dtos;
+using ReservasApi.Request;
 
 namespace ReservasApi.Services.Participants
 {
@@ -6,8 +7,8 @@ namespace ReservasApi.Services.Participants
     {
         Task<IEnumerable<ParticipantDto>> GetParticipants();
         Task<ParticipantDto> GetParticipantById(Guid id);
-        Task AddParticipant(ParticipantDto ParticipantDto);
-        Task UpdateParticipant(ParticipantDto ParticipantDto);
+        Task AddParticipant(CreateParticipantRequest ParticipantDto);
+        Task UpdateParticipant(UpdateParticipantRequest ParticipantDto);
         Task RemoveParticipant(Guid id);
     }
 }

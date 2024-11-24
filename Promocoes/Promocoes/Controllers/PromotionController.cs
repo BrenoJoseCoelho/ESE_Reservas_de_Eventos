@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Promocoes.Dtos;
+using Promocoes.Request;
 using Promocoes.Services.Promotions;
 
 namespace Promocoes.Controllers;
@@ -37,19 +38,19 @@ public class PromotionController : ControllerBase
         return Ok(promotionDto);
     }
     [HttpPost]
-    public async Task<ActionResult> Post([FromBody] PromotionDto promotionDto)
+    public async Task<ActionResult> Post([FromBody] CreatePromotionRequest promotionDto)
     {
         if (promotionDto == null)
             return BadRequest("Invalid Data");
 
         await _PromotionService.AddPromotion(promotionDto);
 
-        return new CreatedAtRouteResult("GetPromotion", new { id = promotionDto.Id },
+        return new CreatedAtRouteResult("GetPromotion",
             promotionDto);
     }
 
     [HttpPut("{id:Guid}")]
-    public async Task<ActionResult> Put(Guid id, [FromBody] PromotionDto promotionDto)
+    public async Task<ActionResult> Put(Guid id, [FromBody] UpdatePromotionRequest promotionDto)
     {
         if (id != promotionDto.Id)
             return BadRequest();

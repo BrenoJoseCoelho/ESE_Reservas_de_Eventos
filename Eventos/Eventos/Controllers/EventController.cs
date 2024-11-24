@@ -1,6 +1,6 @@
 ﻿using EventosApi.Dtos;
+using EventosApi.Request;
 using EventosApi.Services.Events;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventosApi.Controllers
@@ -17,7 +17,6 @@ namespace EventosApi.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<ActionResult<IEnumerable<EventDto>>> Get()
         {
             var EventsDto = await _EventService.GetEvents();
@@ -39,29 +38,29 @@ namespace EventosApi.Controllers
             return Ok(EventDto);
         }
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] EventDto eventDto)
+        public async Task<ActionResult> Post([FromBody] CreateEventRequest eventrequest)
         {
-            if (eventDto == null)
+            if (eventrequest == null)
                 return BadRequest("Invalid Data");
 
-            await _EventService.AddEvent(eventDto);
+            await _EventService.AddEvent(eventrequest);
 
-            return new CreatedAtRouteResult("GetEvent", new { id = eventDto.Id },
-                eventDto);
+            return new CreatedAtRouteResult("GetEvent",
+                eventrequest);
         }
 
         [HttpPut("{id:Guid}")]
-        public async Task<ActionResult> Put(Guid id, [FromBody] EventDto eventDto)
+        public async Task<ActionResult> Put(Guid id, [FromBody] UpdateEventRequest updateEventRequest)
         {
-            if (id != eventDto.Id)
+            if (id != updateEventRequest.Id)
                 return BadRequest();
 
-            if (eventDto is null)
+            if (updateEventRequest is null)
                 return BadRequest();
 
-            await _EventService.UpdateEvent(eventDto);
+            await _EventService.UpdateEvent(updateEventRequest);
 
-            return Ok(eventDto);
+            return Ok(updateEventRequest);
         }
 
         [HttpDelete("{id:Guid}")]

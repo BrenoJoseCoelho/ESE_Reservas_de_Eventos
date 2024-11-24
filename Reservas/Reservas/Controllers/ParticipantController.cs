@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ReservasApi.Dtos;
+using ReservasApi.Request;
 using ReservasApi.Services.Participants;
 
 namespace ReservasApi.Controllers
@@ -37,19 +38,19 @@ namespace ReservasApi.Controllers
             return Ok(participantDto);
         }
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] ParticipantDto participantDto)
+        public async Task<ActionResult> Post([FromBody] CreateParticipantRequest participantDto)
         {
             if (participantDto == null)
                 return BadRequest("Invalid Data");
 
             await _participantService.AddParticipant(participantDto);
 
-            return new CreatedAtRouteResult("GetParticipant", new { id = participantDto.Id },
+            return new CreatedAtRouteResult("GetParticipant",
                 participantDto);
         }
 
         [HttpPut("{id:Guid}")]
-        public async Task<ActionResult> Put(Guid id, [FromBody] ParticipantDto participantDto)
+        public async Task<ActionResult> Put(Guid id, [FromBody] UpdateParticipantRequest participantDto)
         {
             if (id != participantDto.Id)
                 return BadRequest();

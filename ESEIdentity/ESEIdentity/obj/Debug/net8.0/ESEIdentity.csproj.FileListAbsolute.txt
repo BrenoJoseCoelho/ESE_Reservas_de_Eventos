@@ -115,3 +115,10 @@ C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ES
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\bin\Debug\net8.0\ESEIdentity.xml
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\obj\Debug\net8.0\ESEIdentity.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\ESEIdentity\ESEIdentity\obj\Debug\net8.0\ESEIdentity.xml

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Promocoes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+386515271dd10b467c4ec3c996a4910de3037ca0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0d62f5e9e2d9a9b8b1e769324a70e61582ecd21")]
 [assembly: System.Reflection.AssemblyProductAttribute("Promocoes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Promocoes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

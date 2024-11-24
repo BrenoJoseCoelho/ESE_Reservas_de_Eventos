@@ -25,6 +25,11 @@ public class UserService : IUserService
         var userEntity = await _userRepository.GetById(id);
         return _mapper.Map<UserDto>(userEntity);
     }
+    public async Task<UserDto> GetUserByNameAndPassWord(AuthenticationRequest request)
+    {
+        var userEntity = await _userRepository.GetByUserAndPassword(request);
+        return _mapper.Map<UserDto>(userEntity);
+    }
     public async Task AddUser(UserDto userDto)
     {
         var userEntity = _mapper.Map<User>(userDto);

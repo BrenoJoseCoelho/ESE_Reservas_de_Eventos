@@ -2,6 +2,7 @@
 using Promocoes.Dtos;
 using Promocoes.Models;
 using Promocoes.Repositories.Coupons;
+using Promocoes.Request;
 
 namespace Promocoes.Services.Coupons;
 
@@ -25,13 +26,12 @@ public class CouponService : ICouponService
         var couponEntity = await _CouponRepository.GetById(id);
         return _mapper.Map<CouponDto>(couponEntity);
     }
-    public async Task AddCoupon(CouponDto couponDto)
+    public async Task AddCoupon(CreateCouponRequest couponDto)
     {
         var couponEntity = _mapper.Map<Coupon>(couponDto);
         await _CouponRepository.Create(couponEntity);
-        couponDto.Id = couponEntity.Id;
     }
-    public async Task UpdateCoupon(CouponDto couponDto)
+    public async Task UpdateCoupon(UpdateCouponRequest couponDto)
     {
         var couponEntity = _mapper.Map<Coupon>(couponDto);
         await _CouponRepository.Update(couponEntity);

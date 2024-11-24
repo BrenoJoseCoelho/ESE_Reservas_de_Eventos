@@ -1,6 +1,5 @@
 ﻿using ESEIdentity.Dtos;
 using ESEIdentity.Services.Users;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ESEIdentity.Controllers;
@@ -17,7 +16,6 @@ public class UserController : ControllerBase
     }
 
     [HttpGet]
-    [Authorize]
     public async Task<ActionResult<IEnumerable<UserDto>>> Get()
     {
         var usersDto = await _userService.GetUsers();
@@ -29,7 +27,6 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("{id:Guid}", Name = "GetUser")]
-    [Authorize]
     public async Task<ActionResult<UserDto>> Get(Guid id)
     {
         var userDto = await _userService.GetUserById(id);
@@ -52,7 +49,6 @@ public class UserController : ControllerBase
     }
 
     [HttpPut("{id:Guid}")]
-    [Authorize]
     public async Task<ActionResult> Put(Guid id, [FromBody] UserDto userDto)
     {
         if (id != userDto.Id)
@@ -67,7 +63,6 @@ public class UserController : ControllerBase
     }
 
     [HttpDelete("{id:Guid}")]
-    [Authorize]
     public async Task<ActionResult<UserDto>> Delete(Guid id)
     {
         var userDto = await _userService.GetUserById(id);

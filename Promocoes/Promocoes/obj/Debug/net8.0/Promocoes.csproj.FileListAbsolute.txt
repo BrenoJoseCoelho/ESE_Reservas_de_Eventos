@@ -3,16 +3,10 @@ C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Prom
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.AssemblyInfoInputs.cache
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.AssemblyInfo.cs
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.csproj.CoreCompileInputs.cache
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.sourcelink.json
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\ESEIdentity.deps.json
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\ESEIdentity.runtimeconfig.json
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\ESEIdentity.staticwebassets.runtime.json
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\ESEIdentity.exe
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\appsettings.json
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Promocoes.staticwebassets.runtime.json
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Promocoes.exe
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Promocoes.deps.json
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Promocoes.runtimeconfig.json
@@ -20,9 +14,7 @@ C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Prom
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Promocoes.pdb
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Humanizer.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -38,12 +30,6 @@ C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Prom
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Npgsql.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
@@ -53,7 +39,6 @@ C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Prom
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\System.Composition.Hosting.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\System.Composition.TypedParts.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -106,8 +91,6 @@ C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Prom
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\ESEIdentity.dll
-C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\ESEIdentity.pdb
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\staticwebassets\msbuild.Promocoes.Microsoft.AspNetCore.StaticWebAssets.props
@@ -122,3 +105,10 @@ C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Prom
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.pdb
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.genruntimeconfig.cache
 C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\ref\Promocoes.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Promocoes.xml
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\breno\OneDrive\Documentos\GitHub\ESE_Reservas_de_Eventos\Promocoes\Promocoes\obj\Debug\net8.0\Promocoes.xml

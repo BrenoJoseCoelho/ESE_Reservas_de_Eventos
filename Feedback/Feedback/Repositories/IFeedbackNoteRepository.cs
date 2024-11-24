@@ -1,10 +1,11 @@
-﻿using Feedback.Models;
+﻿using Feedback.Dtos;
+using Feedback.Models;
 
 namespace Feedback.Repositories;
 
 public interface IFeedbackNoteRepository
 {
-    Task<IEnumerable<FeedbackNote>> GetAll();
+    Task<IEnumerable<FeedbackNoteDto>> GetAll();
     Task<FeedbackNote> GetById(Guid id);
     Task<FeedbackNote> Create(FeedbackNote feedbackNote);
     Task<FeedbackNote> Update(FeedbackNote feedbackNote);

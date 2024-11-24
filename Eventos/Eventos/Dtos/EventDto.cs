@@ -1,6 +1,4 @@
-﻿using EventosApi.Models;
-
-namespace EventosApi.Dtos
+﻿namespace EventosApi.Dtos
 {
     public class EventDto
     {
@@ -8,6 +6,6 @@ namespace EventosApi.Dtos
         public string Name { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
-        public Enterprise Enterprise { get; set; }
+        public EnterpriseDto Enterprise { get; set; }
     }
 }

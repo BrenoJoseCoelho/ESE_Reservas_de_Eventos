@@ -2,6 +2,7 @@
 using Promocoes.Dtos;
 using Promocoes.Models;
 using Promocoes.Repositories.Promotions;
+using Promocoes.Request;
 
 namespace Promocoes.Services.Promotions;
 
@@ -25,13 +26,12 @@ public class PromotionService : IPromotionService
         var promotionEntity = await _PromotionRepository.GetById(id);
         return _mapper.Map<PromotionDto>(promotionEntity);
     }
-    public async Task AddPromotion(PromotionDto promotionDto)
+    public async Task AddPromotion(CreatePromotionRequest promotionDto)
     {
         var promotionEntity = _mapper.Map<Promotion>(promotionDto);
         await _PromotionRepository.Create(promotionEntity);
-        promotionDto.Id = promotionEntity.Id;
     }
-    public async Task UpdatePromotion(PromotionDto promotionDto)
+    public async Task UpdatePromotion(UpdatePromotionRequest promotionDto)
     {
         var promotionEntity = _mapper.Map<Promotion>(promotionDto);
         await _PromotionRepository.Update(promotionEntity);

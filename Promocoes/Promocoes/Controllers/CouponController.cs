@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Promocoes.Dtos;
+using Promocoes.Request;
 using Promocoes.Services.Coupons;
 
 namespace Promocoes.Controllers;
@@ -14,7 +15,6 @@ public class CouponController : ControllerBase
     {
         _CouponService = CouponService;
     }
-
     [HttpGet]
     public async Task<ActionResult<IEnumerable<CouponDto>>> Get()
     {
@@ -37,19 +37,19 @@ public class CouponController : ControllerBase
         return Ok(couponDto);
     }
     [HttpPost]
-    public async Task<ActionResult> Post([FromBody] CouponDto couponDto)
+    public async Task<ActionResult> Post([FromBody] CreateCouponRequest couponDto)
     {
         if (couponDto == null)
             return BadRequest("Invalid Data");
 
         await _CouponService.AddCoupon(couponDto);
 
-        return new CreatedAtRouteResult("GetCoupon", new { id = couponDto.Id },
+        return new CreatedAtRouteResult("GetCoupon",
             couponDto);
     }
 
     [HttpPut("{id:Guid}")]
-    public async Task<ActionResult> Put(Guid id, [FromBody] CouponDto couponDto)
+    public async Task<ActionResult> Put(Guid id, [FromBody] UpdateCouponRequest couponDto)
     {
         if (id != couponDto.Id)
             return BadRequest();

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ReservasApi.Dtos;
+using ReservasApi.Request;
 using ReservasApi.Services.Reservations;
 
 namespace ReservasApi.Controllers
@@ -37,19 +38,19 @@ namespace ReservasApi.Controllers
             return Ok(reservationDto);
         }
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] ReservationsDto reservationDto)
+        public async Task<ActionResult> Post([FromBody] CreateReservationRequest reservationDto)
         {
             if (reservationDto == null)
                 return BadRequest("Invalid Data");
 
             await _reservationService.AddReservation(reservationDto);
 
-            return new CreatedAtRouteResult("GetReservation", new { id = reservationDto.Id },
+            return new CreatedAtRouteResult("GetReservation",
                 reservationDto);
         }
 
         [HttpPut("{id:Guid}")]
-        public async Task<ActionResult> Put(Guid id, [FromBody] ReservationsDto reservationDto)
+        public async Task<ActionResult> Put(Guid id, [FromBody] UpdateReservationRequest reservationDto)
         {
             if (id != reservationDto.Id)
                 return BadRequest();

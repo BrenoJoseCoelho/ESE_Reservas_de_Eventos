@@ -8,3 +8,5 @@
 /src/Artifacts
 /test/TestResults
 /NuGet.Config
+
+/bin

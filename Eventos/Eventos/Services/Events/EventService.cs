@@ -2,6 +2,7 @@
 using EventosApi.Dtos;
 using EventosApi.Models;
 using EventosApi.Repositories.Events;
+using EventosApi.Request;
 
 namespace EventosApi.Services.Events
 {
@@ -25,13 +26,12 @@ namespace EventosApi.Services.Events
             var eventEntity = await _eventRepository.GetById(id);
             return _mapper.Map<EventDto>(eventEntity);
         }
-        public async Task AddEvent(EventDto eventDto)
+        public async Task AddEvent(CreateEventRequest eventDto)
         {
             var eventEntity = _mapper.Map<Event>(eventDto);
             await _eventRepository.Create(eventEntity);
-            eventDto.Id = eventEntity.Id;
         }
-        public async Task UpdateEvent(EventDto eventDto)
+        public async Task UpdateEvent(UpdateEventRequest eventDto)
         {
             var eventEntity = _mapper.Map<Event>(eventDto);
             await _eventRepository.Update(eventEntity);

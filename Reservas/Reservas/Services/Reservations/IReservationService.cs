@@ -1,4 +1,5 @@
 ﻿using ReservasApi.Dtos;
+using ReservasApi.Request;
 
 namespace ReservasApi.Services.Reservations
 {
@@ -6,8 +7,8 @@ namespace ReservasApi.Services.Reservations
     {
         Task<IEnumerable<ReservationsDto>> GetReservations();
         Task<ReservationsDto> GetReservationById(Guid id);
-        Task AddReservation(ReservationsDto reservationDto);
-        Task UpdateReservation(ReservationsDto reservationDto);
+        Task AddReservation(CreateReservationRequest reservationDto);
+        Task UpdateReservation(UpdateReservationRequest reservationDto);
         Task RemoveReservation(Guid id);
     }
 }
